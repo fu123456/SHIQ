@@ -1,0 +1,11 @@
+The coed is from Xiaojie Guo. If you use the code, please cite the
+following paper:
+#+BEGIN_SRC text
+@inproceedings{guo-2014-robus-separ,
+  author = {Guo, Xiaojie and Cao, Xiaochun and Ma, Yi},
+  title = {Robust separation of reflection from multiple images},
+  booktitle = {CVPR},
+  pages= {2187--2194},
+  year = {2014},
+}
+#+END_SRC

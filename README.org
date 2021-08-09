@@ -1,0 +1,90 @@
+* Overview
+
+  #+CAPTION: Visual comparison of highlight detection and removal on an example image from our dataset. We compare our method with the state-of-the-art removal method Shi /et al/. [7], Guo /et al/. [6], and Yang /et al/ [3], and with the state-of-the-art detection methods including Zhang /et al/. [2], Li /et al/ [1], and Fu /et al/ [8]. Please zoom in to view fine details.
+  [[./images/highlight_removal.png]]
+
+  Figure 1: Visual comparison of highlight detection and removal on an
+  example image from our dataset. We compare our method with the
+  state-of-the-art removal method Shi /et al/. [7], Guo /et al/. [6],
+  and Yang /et al/ [3], and with the state-of-the-art detection methods
+  including Zhang /et al/. [2], Li /et al/ [1], and Fu /et al/ [8].
+  Please zoom in to view fine details.
+
+  Specular highlight detection and removal are fundamental and
+  challenging tasks. Although recent methods have achieved promising
+  results on the two tasks by training on synthetic training data in a
+  supervised manner, they are typically solely designed for highlight
+  detection or removal, and their performance usually deteriorates
+  significantly on real-world images. In this paper, we present a
+  novel network that aims to detect and remove highlights from natural
+  images. To remove the domain gap between synthetic training samples
+  and real test images, and support the investigation of
+  learning-based approaches, we first introduce a dataset with about
+  16K real images, each of which has the corresponding ground truths
+  of highlight detection and removal. Using the presented dataset, we
+  develop a multi-task network for joint highlight detection and
+  removal, based on a new specular highlight image formation model.
+  Experiments on the benchmark datasets and our new dataset show that
+  our approach clearly outperforms state-of-the-art methods for both
+  highlight detection and removal.
+
+* Specular highlight image quadruples (SHIQ)
+
+  To enable effective training and comprehensive evaluation for
+  highlight detection and removal, we in this work introduce a
+  large-scale real dataset for highlight detection and removal. It
+  covers a wide range of scenes, subjects, and lighting conditions.
+  Each image in the dataset has the corresponding highlight detection,
+  removal, and highlight intensity images. Several examples in our
+  dataset are shown in Figure 2.
+
+  [[./images/data_teaser.png]]
+
+  Figure 2: An illustration of several highlight (*1st row*),
+  highlight-free (*2nd row*), highlight intensity (*3rd row*) and
+  highlight mask (*4th row*) image quadruples in our dataset.
+
+  Some notes about the data generation as follows:
+  - The original multi-illumination dataset can be downloaded from
+    [[https://projects.csail.mit.edu/illumination/][Lukas Murmann's homepage]].
+  - The original multi-image specular reflection removal method RPCA
+    can also be available from [[https://sites.google.com/view/xjguo/homepage][xjguo]].
+  - We provide the useful source code which can produce the data
+    including =image cropping=, =data augmentation=, =mask generation= and
+    =white balance operation= /etc/.
+  - You can download our data from Google Drive. The link is:
+    https://drive.google.com/file/d/1RFiNpziz8X5qYPVJPl8Y3nRbfbWVoDCC/view?usp=sharing (~1G).
+  - *Statement*. SHIQ dataset is intended only for research purposes and
+    thus cannot be used commercially. Moreover, reference must be made
+    to the following publication when the dataset is used in any academic
+    and research reports.
+    #+BEGIN_SRC text
+      @InProceedings{fu-2021-multi-task,
+      author = {Fu, Gang and Zhang, Qing and Zhu, Lei and Li, Ping and Xiao, Chunxia},
+      title = {A Multi-Task Network for Joint Specular Highlight Detection and Removal},
+      booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year = {2021},
+      pages = {7752-7761},
+      month = {June},
+      tags = {CVPR},
+      }
+    #+END_SRC
+* Network
+** Requirements
+    - Python3.7
+    - PyTorch 1.5
+    - pillow
+** Test
+   Download model file from [[https://drive.google.com/file/d/1Y-6NZ7benU8pQMXgoRH1u_mVDaKP-cLG/view?usp=sharing][here]], unzip =jshdr.zip= in the dir
+   =checkpoints=, and run the script file =test.sh=.
+
+* References
+
+  - [1] Ranyang Li, Junjun Pan, Yaqing Si, Bin Yan, Yong Hu, and Hong Qin. Specular reflections removal for endoscopic image sequences with adaptive-rpca decomposition. IEEE Transactions on Medical Imaging, 39(2):328–340, 2019.
+  - [2] Wuming Zhang, Xi Zhao, Jean-Marie Morvan, and Liming Chen. Improving shadow suppression for illumination robust face recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 41(3):611–624, 2018.
+  - [3] Qingxiong Yang, Jinhui Tang, and Narendra Ahuja. Efficient and robust specular highlight removal. IEEE Transactions on Pattern Analysis and Machine Intelligence, 37(6):1304– 1311, 2015.
+  - [4] Jie Guo, Zuojian Zhou, and Limin Wang. Single image high- light removal with a sparse and low-rank reflection model. In ECCV, pages 268–283, 2018.
+  - [5] Lukas Murmann, Michael Gharbi, Miika Aittala, and Fredo Durand. A dataset of multi-illumination images in the wild. In ICCV, pages 4080–4089, 2019.
+  - [6] Xiaojie Guo, Xiaochun Cao, and Yi Ma. Robust separation of reflection from multiple images. In CVPR, pages 2187– 2194, 2014.
+  - [7] Jian Shi, Yue Dong, Hao Su, and Stella X. Yu. Learning non-lambertian object intrinsics across shapenet categories. In CVPR, pages 1685–1694, 2017.
+  - [8] Gang Fu, Qing Zhang, Qifeng Lin, Lei Zhu, and Chunxia Xiao. Learning to detect specular highlights from real-world images. In ACM MM, pages 1873–1881, 2020.
