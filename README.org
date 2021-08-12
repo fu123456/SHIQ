@@ -1,7 +1,18 @@
-* Overview
-  This is the project about our JSHDR (CVPR2021).
-  Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf][A Multi-Task Network for Joint Specular Highlight Detection and Removal]].
+This is the project about our JSHDR (CVPR2021).
+Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf][A Multi-Task Network for Joint Specular Highlight Detection and Removal]].
+#+BEGIN_SRC text
+  @InProceedings{fu-2021-multi-task,
+  author = {Fu, Gang and Zhang, Qing and Zhu, Lei and Li, Ping and Xiao, Chunxia},
+  title = {A Multi-Task Network for Joint Specular Highlight Detection and Removal},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2021},
+  pages = {7752-7761},
+  month = {June},
+  tags = {CVPR},
+  }
+#+END_SRC
 
+* Overview
   [[./images/highlight_removal.png]]
 
   Figure 1: Visual comparison of highlight detection and removal on an
@@ -72,9 +83,9 @@
     #+END_SRC
 * Network
 ** Requirements
-    - Python3.7
-    - PyTorch 1.5
-    - pillow
+   - Python3.7
+   - PyTorch 1.5
+   - pillow
 ** Test
    Download model file from [[https://drive.google.com/file/d/1Y-6NZ7benU8pQMXgoRH1u_mVDaKP-cLG/view?usp=sharing][here]], unzip =jshdr.zip= in the dir
    =checkpoints=, and run the script file =test.sh=.
