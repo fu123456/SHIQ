@@ -1,9 +1,8 @@
+#+MACRO: color @@html:<font color="$1">$2</font>@@
+
 * Overview
-
-  This is the project about our JSHDR (CVPR2021).
+{{{color(This is the project about our JSHDR (CVPR2021).)}}}
   Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf][paper]].
-
-  
 
   [[./images/highlight_removal.png]]
 
