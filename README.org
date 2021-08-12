@@ -1,6 +1,6 @@
 * Overview
   This is the project about our JSHDR (CVPR2021).
-  Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf][paper]].
+  Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf][A Multi-Task Network for Joint Specular Highlight Detection and Removal]].
 
   [[./images/highlight_removal.png]]
 
