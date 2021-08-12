@@ -2,7 +2,7 @@
 
   This is the project about our JSHDR (CVPR2021).
 
-  [Paper](https://dl.acm.org/doi/abs/10.1145/3394171.3413586).
+  [Paper](https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_Multi-Task_Network_for_Joint_Specular_Highlight_Detection_and_Removal_CVPR_2021_paper.pdf).
 
   [[./images/highlight_removal.png]]
 
