@@ -83,9 +83,12 @@ Our paper is here [[https://openaccess.thecvf.com/content/CVPR2021/papers/Fu_A_M
     #+END_SRC
 * Network
 ** Requirements
-   - Python3.7
+   - +Python3.7+ Python3.6
    - PyTorch 1.5
    - pillow
+*Notes*: The versions Python and PyTorch must be v3.6 and v1.5. If you
+use Python3.7+, some module can not be correctly loaded; if you use
+PyTorch with other versions, some errors may be caused.
 ** Test
    Download model file from [[https://drive.google.com/file/d/1Y-6NZ7benU8pQMXgoRH1u_mVDaKP-cLG/view?usp=sharing][here]], unzip =jshdr.zip= in the dir
    =checkpoints=, and run the script file =test.sh=.
